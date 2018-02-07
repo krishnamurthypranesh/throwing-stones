@@ -1,4 +1,26 @@
+# Libraries Used
+readr
+readxl
+dplyr
+tidyr
+ggplot2
+# Code Example
 
+library(readr)
+
+data <- read_delim("projects/inputfile.csv", delim = ",", col_names = T, col_types = cols(.default = col_character))
+
+library(dplyr)
+
+data %>%
+  mutate(x = 1:dim(data)[1])
+
+library(ggplot2)
+
+data %>%
+  ggplot() + aes(x) + geom_density()
+
+# Introduction
 Hi! This is my take on the guns dataset!
 
 So, what is this dataset about?
@@ -8,7 +30,7 @@ This is data regarding the recorded possession of firearms and the reason for th
 I have explored how a few of these demographic variables vary in this script. And, I've looked at how these variables vary over just 2 levels of intent: suicides and homicides.
 ------ You're totally free to take this code and make changes to it!----------------
 
-Let's look at the findings of this eda:
+#Findings
 
 ## There were a lot of suicides in this time period:
   The number of suicides easily trumped the number of homicides. There were approximately 62291  suicides and only 33313 homicides in comparison. This shows that most of the people who bought guns did so with an intent of killing themselves.

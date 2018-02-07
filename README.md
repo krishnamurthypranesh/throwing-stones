@@ -1,9 +1,5 @@
 # Libraries Used
-readr
-readxl
-dplyr
-tidyr
-ggplot2
+The tidyverse
 # Code Example
 
 library(readr)
